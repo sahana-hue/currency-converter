@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="converter-container">
+        <div class="header">
+            <h1>Currency Converter</h1>
+            <p>Convert US Dollars to Indian Rupees instantly</p>
+        </div>
+        
+        <div class="input-group">
+            <label for="usd-amount">Amount (USD)</label>
+            <div class="input-wrapper">
+                <span class="currency-symbol">$</span>
+                <input type="number" id="usd-amount" placeholder="0.00" min="0" step="0.01">
+            </div>
+        </div>
+
+        <button id="convert-btn" class="convert-btn">
+            <span>Convert</span>
+        </button>
+
+        <div class="result-section hidden" id="result-section">
+            <div class="loading" id="loading-spinner">Loading...</div>
+            <div class="result-box hidden" id="result-box">
+                <p class="result-label">Converted Amount (INR)</p>
+                <h2 class="result-value" id="inr-value">₹0.00</h2>
+                <p class="rate-info" id="rate-info">1 USD = </p>
+            </div>
+        </div>
+        <div id="error-message" class="error-message hidden">
+            Failed to fetch exchange rates. Please try again.
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
